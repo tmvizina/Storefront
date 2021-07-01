@@ -1,0 +1,24 @@
+﻿@model Product
+
+<h2>Update Database Entry</h2>
+
+<form action="Result" method="post">
+
+    <p>@Model.Name</p>
+    <input type="text" maxlength="30" name="Name" required />
+    <br />
+
+
+    <p>@Model.Price</p>
+    <input name="Price" type="number" required />
+    <br />
+
+    <p>@Model.Quantity</p>
+    <input name="Quantity" type="number" required />
+    <br />
+
+    <p>@Model.Description</p>
+    <input type="text" maxlength="100" name="Description" required />
+    <br />
+    <input type="submit" />
+</form>

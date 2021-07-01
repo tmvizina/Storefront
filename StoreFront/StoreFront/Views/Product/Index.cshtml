@@ -1,0 +1,28 @@
+﻿@model IEnumerable<Product>
+
+<h2> This is employee side</h2>
+
+<a asp-action="AddProduct" asp-controller="Product"> Add a Product to the Database  </a>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+@foreach (Product p in Model)
+{
+    <a asp-action="Delete" asp-controller="Product" asp-route-iD="@p.Id"> Delete  </a>
+    <a asp-action="Update" asp-controller="Product" asp-route-iD="@p.Id"> Update  </a>
+    <a asp-action="Details" asp-controller="Product" asp-route-iD="@p.Id"> Details  </a>
+
+
+    <li>@p.Id</li>
+    <li>@p.Name</li>
+    <li>@p.Price</li>
+    <li>@p.Quantity</li>
+    <li>@p.Description</li>
+    <br />
+}
+
+<a asp-action="ReplenishStock" asp-controller="Product"> </a>

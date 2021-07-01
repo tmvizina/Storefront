@@ -1,0 +1,9 @@
+﻿@model Product
+
+<li>@Model.Id</li>
+<li>@Model.Name</li>
+<li>@Model.Price</li>
+<li>@Model.Name</li>
+<li>@Model.Description</li>
+
+<a asp-action="ConfirmDelete" asp-controller="Product" asp-route-iD="@Model.Id"> I am sure I wish to delete this product @Model.Name </a>

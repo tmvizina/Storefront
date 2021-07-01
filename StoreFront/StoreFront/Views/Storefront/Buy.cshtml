@@ -1,0 +1,10 @@
+﻿@model Product 
+
+
+<li>@Model.Id</li>
+<li>@Model.Name</li>
+<li>@Model.Price</li>
+<li>@Model.Name</li>
+<li>@Model.Description</li>
+
+<a asp-action="ConfirmBuy" asp-controller="Storefront" asp-route-iD="@Model.Id"> Buy @Model.Name </a>
